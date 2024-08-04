@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,7 @@ public class InfiniteReel : MonoBehaviour {
 	[SerializeField] private ContentSizeFitter contentSizeFitter;
 	[SerializeField] private FigureUI figureUIPrefab;
 	[SerializeField] private ReelDefinition reelDefinition;
+	[SerializeField] private float velocity = 10000;
 
 	//reelDefinition dependency should be assigned, by something else.
 	private void Start() {
@@ -14,24 +16,55 @@ public class InfiniteReel : MonoBehaviour {
 	}
 
 	public void Bind(ReelDefinition reelDefinition) {
-		reelDefinition.figures.ForEach(figureDefinition => {
+		scrollRect.content.sizeDelta += Vector2.up * reelDefinition.figures.Count * FigureHeight;
+
+		for (var i = 0; i < reelDefinition.figures.Count; i++) {
+			FigureDefinition figureDefinition = reelDefinition.figures[i];
 			FigureUI figureUI = Instantiate(figureUIPrefab, scrollRect.content);
+			figureUI.transform.localPosition = Vector3.up * i * FigureHeight; 
 			figureUI.Bind(figureDefinition);
-		});
-		LayoutRebuilder.ForceRebuildLayoutImmediate(scrollRect.content);
-		contentSizeFitter.enabled = false;
-		verticalLayout.enabled = false;
+		}
 	}
 
 	private void Update() {
-		Transform firstChild = scrollRect.content.GetChild(0);
-		float figureUIHeight = figureUIPrefab.GetHeight;
-		var firstChildPos = scrollRect.transform.InverseTransformPoint(firstChild.transform.position);
-		if (firstChildPos.y > figureUIHeight) {
-			Transform lastChild = scrollRect.content.GetChild(scrollRect.content.childCount - 1);
-			firstChild.transform.localPosition = lastChild.localPosition - Vector3.up * figureUIHeight;
-			Debug.LogError(" Increase the scrollRect Content child Count");
-			firstChild.SetAsLastSibling();
+		RepositionsUIElements();
+
+		if (Input.GetKeyDown(KeyCode.F1)) {
+			Play();
+		}
+		
+		if (Input.GetKeyDown(KeyCode.F2)) {
+			Stop();
 		}
 	}
+
+	public void Play() {
+		scrollRect.inertia = true;
+		scrollRect.decelerationRate = 1;
+		DOTween.To(()=> scrollRect.velocity, x=> scrollRect.velocity = x, new Vector2(0,-velocity), .25f).SetEase(Ease.InElastic);
+	}
+
+	public void Stop() {
+		scrollRect.inertia = false;
+		scrollRect.decelerationRate = 0;
+		float pos = Mathf.FloorToInt(scrollRect.content.localPosition.y / figureUIPrefab.GetHeight) * figureUIPrefab.GetHeight;
+		scrollRect.content.DOLocalMoveY(pos, .15f).SetEase(Ease.OutElastic);
+	}
+
+	private void RepositionsUIElements() {
+		Transform childToCheck = GetFirstSibling;
+		Vector3 childPos = scrollRect.transform.InverseTransformPoint(childToCheck.transform.position);
+		if (childPos.y < -FigureHeight) {
+			RectTransform content = scrollRect.content;
+			Transform firstChild = GetLastSibling;
+			childToCheck.transform.localPosition = firstChild.localPosition + Vector3.up * FigureHeight;
+			childToCheck.SetAsLastSibling();
+			content.sizeDelta += new Vector2(0,  FigureHeight);
+		}
+	}
+
+	private Transform GetFirstSibling => scrollRect.content.GetChild(0);
+	private Transform GetLastSibling => scrollRect.content.GetChild(scrollRect.content.childCount - 1);
+	private float FigureHeight => figureUIPrefab.GetHeight;
+
 }
