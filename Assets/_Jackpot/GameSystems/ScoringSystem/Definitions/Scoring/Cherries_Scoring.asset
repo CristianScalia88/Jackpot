@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 330de50515284b73933d25362a9562c6, type: 3}
   m_Name: Cherries_Scoring
   m_EditorClassIdentifier: 
-  <figure>k__BackingField: {fileID: 11400000, guid: 047683a0a5267c44c99f1e28d6b9f0d0, type: 2}
+  figure: {fileID: 11400000, guid: 047683a0a5267c44c99f1e28d6b9f0d0, type: 2}
   coincidencesScoring: 00000000000000000100000002000000050000000a000000

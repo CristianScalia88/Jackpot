@@ -1204,10 +1204,15 @@ MonoBehaviour:
   spinTimeMax: 1
   spinButton: {fileID: 975587041}
   scoringCheckers:
+  - {fileID: 11400000, guid: 660aea9b47fdcad4db421e6f83a79935, type: 2}
+  - {fileID: 11400000, guid: fea47cdf5da847849a7b4178d5fdf82e, type: 2}
+  - {fileID: 11400000, guid: 8a734612644a2454392eced764bb239d, type: 2}
+  - {fileID: 11400000, guid: 85f026140efa68c4796a2ac7ac22096c, type: 2}
+  - {fileID: 11400000, guid: ead57d5413f7a9544a781462ed0c57da, type: 2}
+  - {fileID: 11400000, guid: 6b6e61afcf1457947a73a25dc86de5bd, type: 2}
   - {fileID: 11400000, guid: fcdef863a0fa28e49a376ef2fd74f70d, type: 2}
   - {fileID: 11400000, guid: 1b2c788202e564849b2b6ea273379b30, type: 2}
   - {fileID: 11400000, guid: 7a907b3b4e2a68c4591516dce454c321, type: 2}
-  - {fileID: 11400000, guid: 398483e96c411344db9f9e98f68bc619, type: 2}
 --- !u!1001 &2030019686
 PrefabInstance:
   m_ObjectHideFlags: 0

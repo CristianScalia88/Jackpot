@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 330de50515284b73933d25362a9562c6, type: 3}
   m_Name: Bell_Scoring
   m_EditorClassIdentifier: 
-  <figure>k__BackingField: {fileID: 11400000, guid: f744678276f165d4993eed33b5c5971f, type: 2}
+  figure: {fileID: 11400000, guid: f744678276f165d4993eed33b5c5971f, type: 2}
   coincidencesScoring: 000000000000000019000000320000004b00000064000000

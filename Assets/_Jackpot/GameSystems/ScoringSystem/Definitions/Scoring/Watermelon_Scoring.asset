@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 330de50515284b73933d25362a9562c6, type: 3}
   m_Name: Watermelon_Scoring
   m_EditorClassIdentifier: 
-  <figure>k__BackingField: {fileID: 11400000, guid: 5d14ce6f4c25df047b6a2072c35f8c50, type: 2}
+  figure: {fileID: 11400000, guid: 5d14ce6f4c25df047b6a2072c35f8c50, type: 2}
   coincidencesScoring: 00000000000000000a000000140000001e0000003c000000

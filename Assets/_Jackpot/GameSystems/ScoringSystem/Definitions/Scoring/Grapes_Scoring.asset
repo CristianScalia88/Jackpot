@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 330de50515284b73933d25362a9562c6, type: 3}
   m_Name: Grapes_Scoring
   m_EditorClassIdentifier: 
-  <figure>k__BackingField: {fileID: 11400000, guid: dc63a2898d44050428f739f508ca8ca3, type: 2}
+  figure: {fileID: 11400000, guid: dc63a2898d44050428f739f508ca8ca3, type: 2}
   coincidencesScoring: 0000000000000000050000000a0000001400000032000000
