@@ -56,6 +56,9 @@ public class InfiniteReel : MonoBehaviour {
 	}
 
 	private Transform GetFirstSibling => scrollRect.content.GetChild(0);
+	public FigureUI GetFirstFigure => scrollRect.content.GetChild(2).GetComponent<FigureUI>();
+	public FigureUI GetSecondFigure => scrollRect.content.GetChild(1).GetComponent<FigureUI>();
+	public FigureUI GetThirdFigure => scrollRect.content.GetChild(0).GetComponent<FigureUI>();
 	private Transform GetLastSibling => scrollRect.content.GetChild(scrollRect.content.childCount - 1);
 	private float FigureHeight => figureUIPrefab.GetHeight;
 

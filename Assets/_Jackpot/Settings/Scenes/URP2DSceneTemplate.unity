@@ -1200,9 +1200,17 @@ MonoBehaviour:
   - {fileID: 1638850715}
   - {fileID: 1200668085}
   delayBetweenReels: 0.15
-  spinTimeMin: 2
-  spinTimeMax: 4
+  spinTimeMin: 1
+  spinTimeMax: 2
   spinButton: {fileID: 975587041}
+  scoringCheckers:
+  - {fileID: 11400000, guid: b632dc5a380e0fb48baf95582ee4ff8d, type: 2}
+  - {fileID: 11400000, guid: cebf40fd943016e4b9266461ad1dc899, type: 2}
+  - {fileID: 11400000, guid: 659cdf28dfe410a478ac8226adffb5cf, type: 2}
+  - {fileID: 11400000, guid: bf6f91d74ea614044aabfefeb6b7b19e, type: 2}
+  - {fileID: 11400000, guid: d2317fd65ab106b4fb3128ed7a32dd39, type: 2}
+  - {fileID: 11400000, guid: 76277e260b4d8fc4c8e6038720236079, type: 2}
+  - {fileID: 11400000, guid: 7b6a4ab0e60693b45a7e1cea54ea2705, type: 2}
 --- !u!1001 &2030019686
 PrefabInstance:
   m_ObjectHideFlags: 0
