@@ -205,6 +205,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1823409351}
     m_Modifications:
+    - target: {fileID: 1030441393703018830, guid: 66f920d2f822d8948ae579a145bc87ca, type: 3}
+      propertyPath: reelDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 61949c6f713c5f447a34688ca344cd4b, type: 2}
     - target: {fileID: 1539794501865017633, guid: 66f920d2f822d8948ae579a145bc87ca, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -820,37 +824,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134913861}
   m_CullTransparentMesh: 1
---- !u!1 &1141956286
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1141956287}
-  m_Layer: 0
-  m_Name: SlotMachine
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1141956287
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1141956286}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1200668083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -859,6 +832,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1823409351}
     m_Modifications:
+    - target: {fileID: 1030441393703018830, guid: 66f920d2f822d8948ae579a145bc87ca, type: 3}
+      propertyPath: reelDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f3fc723313ddc24f97f196be2d35a11, type: 2}
     - target: {fileID: 1539794501865017633, guid: 66f920d2f822d8948ae579a145bc87ca, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1029,6 +1006,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1823409351}
     m_Modifications:
+    - target: {fileID: 1030441393703018830, guid: 66f920d2f822d8948ae579a145bc87ca, type: 3}
+      propertyPath: reelDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 6a4c9e446843de748b81fc8659f8cb00, type: 2}
     - target: {fileID: 1539794501865017633, guid: 66f920d2f822d8948ae579a145bc87ca, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1174,6 +1155,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1823409351}
     m_Modifications:
+    - target: {fileID: 1030441393703018830, guid: 66f920d2f822d8948ae579a145bc87ca, type: 3}
+      propertyPath: reelDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 0272b5ccb240410408e9419575c22515, type: 2}
     - target: {fileID: 1539794501865017633, guid: 66f920d2f822d8948ae579a145bc87ca, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1276,6 +1261,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1823409351}
     m_Modifications:
+    - target: {fileID: 1030441393703018830, guid: 66f920d2f822d8948ae579a145bc87ca, type: 3}
+      propertyPath: reelDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 38c6aaa69f3041648b85a47c997c9cdb, type: 2}
     - target: {fileID: 1539794501865017633, guid: 66f920d2f822d8948ae579a145bc87ca, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1372,5 +1361,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 744515755}
-  - {fileID: 1141956287}
   - {fileID: 1404071575}
