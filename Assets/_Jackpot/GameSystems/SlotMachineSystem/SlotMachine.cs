@@ -62,6 +62,7 @@ namespace _Jackpot.GameSystems.SlotMachineSystem {
 		}
 
 		private IEnumerator AnimateScoringResult(FigureUI[,] figures, ScoringResult scoringResult) {
+			Debug.LogError(scoringResult.score);
 			scoringResult.positions.ForEach(pos => {
 				Sequence s = DOTween.Sequence();
 				FigureUI figureUI = figures[pos.row, pos.column];
@@ -72,7 +73,6 @@ namespace _Jackpot.GameSystems.SlotMachineSystem {
 				s.AppendCallback(()=> figureUI.OverrideSortingLayer(0,false));
 			});
 			yield return new WaitForSeconds(2.27f);
-			Debug.LogError(scoringResult.score);
 		}
 	}
 }
