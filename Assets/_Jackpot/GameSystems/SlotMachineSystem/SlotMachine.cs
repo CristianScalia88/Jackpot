@@ -72,6 +72,7 @@ namespace _Jackpot.GameSystems.SlotMachineSystem {
 				s.AppendCallback(()=> figureUI.OverrideSortingLayer(0,false));
 			});
 			yield return new WaitForSeconds(2.27f);
+			Debug.LogError(scoringResult.score);
 		}
 	}
 }

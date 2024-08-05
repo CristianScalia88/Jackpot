@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41d3bc612bc44dfc8e9b763146e70536, type: 3}
-  m_Name: Orange_LineScoring
+  m_Name: Lemon_Scoring
   m_EditorClassIdentifier: 
-  figure: {fileID: 11400000, guid: a5e2428947eb4a54888247339ec71844, type: 2}
-  coincidencesScoring: 0000000000000000050000000a0000000f0000001e000000
+  figure: {fileID: 11400000, guid: 4fc3259987cb6d34fa396fd9e0dbf834, type: 2}
+  coincidencesScoring: 000000000000000002000000050000000a00000014000000

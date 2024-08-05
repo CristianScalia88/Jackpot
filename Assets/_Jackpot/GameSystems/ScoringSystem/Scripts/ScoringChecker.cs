@@ -11,6 +11,7 @@ public class ScoringResult {
 	public int score = 0;
 }
 
+[System.Serializable]
 public class MatrixPosition {
 	public int row;
 	public int column;
