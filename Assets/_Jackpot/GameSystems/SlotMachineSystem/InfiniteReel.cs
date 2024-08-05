@@ -28,17 +28,9 @@ public class InfiniteReel : MonoBehaviour {
 
 	private void Update() {
 		RepositionsUIElements();
-
-		if (Input.GetKeyDown(KeyCode.F1)) {
-			Play();
-		}
-		
-		if (Input.GetKeyDown(KeyCode.F2)) {
-			Stop();
-		}
 	}
 
-	public void Play() {
+	public void Spin() {
 		scrollRect.inertia = true;
 		scrollRect.decelerationRate = 1;
 		DOTween.To(()=> scrollRect.velocity, x=> scrollRect.velocity = x, new Vector2(0,-velocity), .25f).SetEase(Ease.InElastic);
@@ -54,7 +46,7 @@ public class InfiniteReel : MonoBehaviour {
 	private void RepositionsUIElements() {
 		Transform childToCheck = GetFirstSibling;
 		Vector3 childPos = scrollRect.transform.InverseTransformPoint(childToCheck.transform.position);
-		if (childPos.y < -FigureHeight) {
+		if (childPos.y <= -FigureHeight) {
 			RectTransform content = scrollRect.content;
 			Transform firstChild = GetLastSibling;
 			childToCheck.transform.localPosition = firstChild.localPosition + Vector3.up * FigureHeight;
