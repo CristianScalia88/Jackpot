@@ -9,10 +9,8 @@ public class LineScoringTests {
 
 	[SetUp]
 	public void SetupTests() {
-		scoringChecker =
-			AssetDatabase.LoadAssetAtPath<ScoringChecker>("Assets/_Jackpot/GameSystems/ScoringSystem/Editor/Tests/Test_LineScoring.asset");
-		figureDefinition =
-			AssetDatabase.LoadAssetAtPath<FigureDefinition>("Assets/_Jackpot/GameSystems/ScoringSystem/Editor/Tests/TestFigure.asset");
+		scoringChecker = AssetDatabase.LoadAssetAtPath<ScoringChecker>("Assets/_Jackpot/GameSystems/ScoringSystem/Definitions/CustomPattern/Row_0_PatternPattern.asset");
+		figureDefinition = AssetDatabase.LoadAssetAtPath<FigureDefinition>("Assets/_Jackpot/GameSystems/ScoringSystem/Editor/Tests/TestFigure.asset");
 	}
 
 	[Test]

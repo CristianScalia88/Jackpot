@@ -10,18 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a274f9c8415c4539be937eee06a425d3, type: 3}
-  m_Name: Row_1_PatternPattern
+  m_Name: CustomPattern-Test
   m_EditorClassIdentifier: 
   positions:
-  - row: 1
+  - row: 0
     column: 0
-  - row: 1
-    column: 1
-  - row: 1
-    column: 2
-  - row: 1
-    column: 3
-  - row: 1
+  - row: 0
     column: 4
   allScoring:
   - {fileID: 11400000, guid: eee05a55120da094d951ac9d17d3db4d, type: 2}

@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Slot Machine/Scoring/Create Custom Scoring")]
 public class CustomScoringChecker : ScoringChecker {
 	public List<MatrixPosition> positions;
-	public List<LineScoringChecker> allLineScoring;
+	public List<FigureScoringDefinition> allScoring;
 
 	public override bool CheckAndGetScoring(FigureDefinition[,] matrix, out ScoringResult scoringResult) {
 		scoringResult = new ScoringResult();
@@ -21,8 +21,8 @@ public class CustomScoringChecker : ScoringChecker {
 		}
 
 		int coincidences = scoringResult.positions.Count;
-		LineScoringChecker lineScoringForFigure = allLineScoring.FirstOrDefault(s => s.FigureDefinition == figureToCheck);
-		scoringResult.score = lineScoringForFigure?.GetScoreFor(coincidences) ?? 0;
+		FigureScoringDefinition figureScoringForFigure = allScoring.FirstOrDefault(s => s.FigureDefinition == figureToCheck);
+		scoringResult.score = figureScoringForFigure?.GetScoreFor(coincidences) ?? 0;
 		return scoringResult.score > 0;
 	}
 }
