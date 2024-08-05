@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 1539794501865017633}
   - component: {fileID: 1315188404594334489}
   - component: {fileID: 2459520144326606710}
-  - component: {fileID: 6428886169925432260}
   - component: {fileID: 1030441393703018830}
   m_Layer: 5
   m_Name: ReelUI
@@ -203,36 +202,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6428886169925432260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8864188591869316366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Content: {fileID: 3899190506838913741}
-  m_Horizontal: 0
-  m_Vertical: 1
-  m_MovementType: 1
-  m_Elasticity: 0.1
-  m_Inertia: 1
-  m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
-  m_Viewport: {fileID: 7034195009257978227}
-  m_HorizontalScrollbar: {fileID: 0}
-  m_VerticalScrollbar: {fileID: 0}
-  m_HorizontalScrollbarVisibility: 2
-  m_VerticalScrollbarVisibility: 2
-  m_HorizontalScrollbarSpacing: -3
-  m_VerticalScrollbarSpacing: -3
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1030441393703018830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,9 +214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19c2e7a06db5394181553cee640555d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollRect: {fileID: 6428886169925432260}
-  verticalLayout: {fileID: 0}
-  contentSizeFitter: {fileID: 0}
+  content: {fileID: 3899190506838913741}
   figureUIPrefab: {fileID: 524336332663340145, guid: 23c9c0950544ea24692729dfae9ac2d9, type: 3}
   reelDefinition: {fileID: 11400000, guid: 7bb6e7ea30a10b94e9c2d84e71c5e051, type: 2}
-  velocity: 10000
+  spinVelocity: 10000
+  targetIndex: -1

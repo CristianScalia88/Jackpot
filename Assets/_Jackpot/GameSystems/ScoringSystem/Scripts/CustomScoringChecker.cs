@@ -23,6 +23,7 @@ public class CustomScoringChecker : ScoringChecker {
 		int coincidences = scoringResult.positions.Count;
 		FigureScoringDefinition figureScoringForFigure = allScoring.FirstOrDefault(s => s.FigureDefinition == figureToCheck);
 		scoringResult.score = figureScoringForFigure?.GetScoreFor(coincidences) ?? 0;
+		scoringResult.scoringChecker = this;
 		return scoringResult.score > 0;
 	}
 }
