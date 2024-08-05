@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 503262478551391974}
   - component: {fileID: 7510782706618785287}
   - component: {fileID: 524336332663340145}
+  - component: {fileID: 7973913571082738960}
   m_Layer: 5
   m_Name: FigureUI
   m_TagString: Untagged
@@ -90,3 +91,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 7510782706618785287}
   rectTransform: {fileID: 3450097381707683071}
+  canvas: {fileID: 7973913571082738960}
+--- !u!223 &7973913571082738960
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4518991629095041342}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0

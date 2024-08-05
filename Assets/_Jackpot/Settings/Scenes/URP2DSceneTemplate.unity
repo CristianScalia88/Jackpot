@@ -1201,7 +1201,7 @@ MonoBehaviour:
   - {fileID: 1200668085}
   delayBetweenReels: 0.15
   spinTimeMin: 1
-  spinTimeMax: 2
+  spinTimeMax: 1
   spinButton: {fileID: 975587041}
   scoringCheckers:
   - {fileID: 11400000, guid: b632dc5a380e0fb48baf95582ee4ff8d, type: 2}

@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -55,14 +56,22 @@ namespace _Jackpot.GameSystems.SlotMachineSystem {
 
 			foreach (ScoringChecker scoringChecker in scoringCheckers) {
 				if (scoringChecker.CheckAndGetScoring(figuresDefinitions, out ScoringResult scoringResult)) {
-					yield return AnimateScoringResult(scoringResult);
+					yield return AnimateScoringResult(figures,scoringResult);
 				}
 			}
 		}
 
-		private IEnumerator AnimateScoringResult(ScoringResult scoringResult) {
-			Debug.LogError(string.Join(" , ", scoringResult.positions));
-			yield return new WaitForSeconds(1);
+		private IEnumerator AnimateScoringResult(FigureUI[,] figures, ScoringResult scoringResult) {
+			scoringResult.positions.ForEach(pos => {
+				Sequence s = DOTween.Sequence();
+				FigureUI figureUI = figures[pos.row, pos.column];
+				figureUI.OverrideSortingLayer(10,true);
+				s.Append(figureUI.transform.DOScale(1.25f, .1f).SetEase(Ease.OutBounce));
+				s.Append(figureUI.transform.DOShakeRotation(1.25f, 3f).SetEase(Ease.Linear));
+				s.Append(figureUI.transform.DOScale(1, .1f).SetEase(Ease.OutElastic));
+				s.AppendCallback(()=> figureUI.OverrideSortingLayer(0,false));
+			});
+			yield return new WaitForSeconds(2.27f);
 		}
 	}
 }
