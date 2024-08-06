@@ -10,6 +10,7 @@ public class ScoringResult {
 	public List<MatrixPosition> positions = new List<MatrixPosition>();
 	public int score = 0;
 	public ScoringChecker scoringChecker;
+	public FigureDefinition figureDefinition;
 }
 
 [System.Serializable]

@@ -12,9 +12,9 @@ public class InfiniteReel : MonoBehaviour {
 	
 	private List<FigureUI> figuresUI;
 	private Vector3 velocity;
-
-
+	private bool stopped;
 	private int targetIndex;
+	
 #if UNITY_EDITOR
 	public Stack<string> logs = new Stack<string>();
 	public int forceResult = -1;
@@ -60,7 +60,6 @@ public class InfiniteReel : MonoBehaviour {
 		DOTween.To(()=> velocity, x=> velocity = x, new Vector3(0,-spinVelocity, 0), .25f).SetEase(Ease.InElastic);
 	}
 
-	private bool stopped;
 	public IEnumerator Stop() {
 		stopped = true;
 		yield return new WaitUntil(() => GetFirstSibling == TargetFigure);

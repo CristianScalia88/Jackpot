@@ -50,6 +50,7 @@ namespace _Jackpot.GameSystems.SlotMachineSystem {
 				{reels[0].GetSecondFigure, reels[1].GetSecondFigure, reels[2].GetSecondFigure, reels[3].GetSecondFigure, reels[4].GetSecondFigure},
 				{reels[0].GetThirdFigure , reels[1].GetThirdFigure , reels[2].GetThirdFigure , reels[3].GetThirdFigure , reels[4].GetThirdFigure }
 			};
+			//Convert Figures UI to Figures Definitions Matrix
 			int rowsCount = figures.GetLength(0);
 			int columnsCount = figures.GetLength(1);
 			FigureDefinition[,] figuresDefinitions = new FigureDefinition[3, 5];
@@ -58,11 +59,11 @@ namespace _Jackpot.GameSystems.SlotMachineSystem {
 					figuresDefinitions[row, column] = figures[row, column].FigureDefinition;
 				}
 			}
-
+			//Checking Score
 			foreach (ScoringChecker scoringChecker in scoringCheckers) {
 				if (scoringChecker.CheckAndGetScoring(figuresDefinitions, out ScoringResult scoringResult)) {
 #if UNITY_EDITOR
-					Debug.LogWarning(scoringResult.scoringChecker.name + " " + scoringResult.score);
+					Debug.LogWarning($"Pattern:{scoringResult.scoringChecker.name} Figure:{scoringResult.figureDefinition.name} Score:{scoringResult.score}");
 #endif
 					yield return AnimateScoringResult(figures,scoringResult);
 				}

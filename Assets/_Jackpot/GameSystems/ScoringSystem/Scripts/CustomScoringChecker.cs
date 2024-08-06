@@ -24,6 +24,7 @@ public class CustomScoringChecker : ScoringChecker {
 		FigureScoringDefinition figureScoringForFigure = allScoring.FirstOrDefault(s => s.FigureDefinition == figureToCheck);
 		scoringResult.score = figureScoringForFigure?.GetScoreFor(coincidences) ?? 0;
 		scoringResult.scoringChecker = this;
+		scoringResult.figureDefinition = figureToCheck;
 		return scoringResult.score > 0;
 	}
 }
